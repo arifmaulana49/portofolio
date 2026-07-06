@@ -1,0 +1,16 @@
+{
+  "name": "portofolio-root",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev:backend": "bun --cwd backend dev",
+    "dev:frontend": "bun --cwd frontend dev",
+    "dev": "concurrently \"bun run dev:backend\" \"bun run dev:frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.3"
+  }
+}
